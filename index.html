@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="manifest" href="manifest.webmanifest">
+
+		<title>HAPPY MOONBYUL DAY 1222</title>
+		<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+		<link rel="icon" type="image/png" href="assets/icon.png">
+
+		<link rel="stylesheet" href="css/range_slider.css">
+		<link rel="stylesheet" href="css/playing.css">
+		<link rel="stylesheet" href="css/shelf.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script src="js/window.mjs" type="module"></script>
+	</head>
+	<body>
+		<div class="header"> <!--/ Codrops top bar -->	
+			<h1 align="center" style=" color:white; font-size: 50px "><strong>HAPPY &nbsp; MOONBYUL &nbsp; DAY &nbsp; 1222</strong></h1>
+		</div>
+
+		<!-- Have these style attributes here so that the page will look correct without the CSS being fully parsed -->
+		<div id="shelf" style="opacity: 0">
+			
+			<div class="case" title="1. SELFISH"  onclick="loadCassette(this.title, 'audio/1. SELFISH.ogg')"></div>
+			
+			
+			
+			
+
+
+		</div>
+		<div id="container" class="square" style="display: none">
+		
+			<div id="messages">
+				<div id="percent">HMM</div>
+				<div id="description"></div>
+			</div>
+			<div id="playing-container">
+				<div class="bar">
+					<div class="button small" onclick="Buttons.Eject()"><img src="assets/icons/eject.svg"></div>
+					<div id="button_play" class="button" onmousedown="Buttons.Play()"><img src="assets/icons/play.svg"></div>
+					<div class="button" onmousedown="Buttons.Stop()"><img src="assets/icons/stop.svg"></div>
+				</div>
+				<div id="cassette">
+					<div class="label"></div>
+				</div>
+				<div class="bar bottom">
+					<div class="big"><input id="volume" type="range" max="130" min="0" step="1" value="30" oninput="Buttons.Volume(this.value)"></div>
+					<div class="button small" onmousedown="Buttons.PlaySpeed(-0.1)"><img src="assets/icons/slow.svg"></div>
+					<div class="button small" onmousedown="Buttons.PlaySpeed(+0.1)"><img src="assets/icons/fast.svg"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
